@@ -1,0 +1,40 @@
+<html>
+<head><title> Login Page </title> 
+	<script>
+	function funGo()
+	{
+		var a = document.forms['login'].elements['userid'].value;
+		var b = document.forms['login'].elements['pswrd'].value;
+		var m = document.forms['login'].elements['mail'].value;
+		var n = m.includes("@gmail.com");
+         	
+	 	if(a != "abc" && b != "abc" )
+          			{alert("Error Password or Username");}
+ 		else if(n==false)
+          			{alert("Enter valid mail");}
+		else
+			{document.write("Welcome "+a);}
+	}
+	</script>
+	
+</head>
+<body>
+<center>
+	<h1>Application Form</h1>
+	<h2>LOGIN CREDENTIALS</h2>
+	<form name="login">
+		<p>Enter your username</p>  
+			<input type="text" id="userid" name="userid" required><br><br>
+		<p>Enter your password</p>
+			<input type="password" name="pswrd" required><br><br>
+		<p>Enter your Email</p>
+			<input type="text" name="mail" required><br>
+		<p>Gender:</p>
+			<input type="radio" name="gender">male
+			<input type="radio" name="gender">female
+			<br>
+		<input type="submit" onclick="funGo()" value="Login"/>
+	</form>
+</center>
+</body>
+</html>
